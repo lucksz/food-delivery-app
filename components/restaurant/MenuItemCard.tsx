@@ -5,12 +5,17 @@ import { Text, TouchableOpacity, View } from 'react-native';
 
 interface Props {
   item: MenuItem;
+  onPress?: () => void;
   onAddPress?: () => void;
 }
 
-export default function MenuItemCard({ item, onAddPress }: Props) {
+export default function MenuItemCard({ item, onPress, onAddPress }: Props) {
   return (
-    <View className="flex-row items-start bg-white rounded-2xl p-3 mb-3 border border-gray-100">
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={onPress}
+      className="flex-row items-start bg-white rounded-2xl p-3 mb-3 border border-gray-100"
+    >
       <View className="flex-1 pr-3">
         <Text className="text-base font-bold text-gray-900" numberOfLines={1}>
           {item.name}
@@ -47,6 +52,6 @@ export default function MenuItemCard({ item, onAddPress }: Props) {
           <Ionicons name="add" size={16} color="#fff" />
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }

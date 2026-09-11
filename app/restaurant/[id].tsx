@@ -52,7 +52,13 @@ export default function RestaurantScreen() {
         />
 
         {selectedCategory && (
-          <MenuSection title={selectedCategory.label} items={selectedCategory.items} />
+          <MenuSection
+            title={selectedCategory.label}
+            items={selectedCategory.items}
+            onItemPress={(item) =>
+              router.push({ pathname: '/product/[id]', params: { id: item.id, restaurantId: restaurant.id } })
+            }
+          />
         )}
 
         <View className="h-6" />

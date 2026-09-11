@@ -7,9 +7,10 @@ interface Props {
   items: MenuItem[];
   onSeeAllPress?: () => void;
   onAddItem?: (item: MenuItem) => void;
+  onItemPress?: (item: MenuItem) => void;
 }
 
-export default function MenuSection({ title, items, onSeeAllPress, onAddItem }: Props) {
+export default function MenuSection({ title, items, onSeeAllPress, onAddItem, onItemPress }: Props) {
   return (
     <View className="px-4 pt-5 pb-2">
       <View className="flex-row items-center justify-between mb-3">
@@ -20,7 +21,12 @@ export default function MenuSection({ title, items, onSeeAllPress, onAddItem }: 
       </View>
 
       {items.map((item) => (
-        <MenuItemCard key={item.id} item={item} onAddPress={() => onAddItem?.(item)} />
+        <MenuItemCard
+          key={item.id}
+          item={item}
+          onPress={() => onItemPress?.(item)}
+          onAddPress={() => onAddItem?.(item)}
+        />
       ))}
     </View>
   );

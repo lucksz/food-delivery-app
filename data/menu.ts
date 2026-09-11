@@ -45,6 +45,16 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
             'Pão brioche, 180g de carne, cheddar, bacon, alface, tomate e molho especial da casa.',
           price: 'R$ 32,90',
           image: IMG.burgerCheddarBacon,
+          sizes: [
+            { id: 'padrao', label: 'Padrão', description: '180g de carne', price: 'R$ 32,90' },
+            { id: 'duplo', label: 'Duplo', description: '360g de carne', price: 'R$ 44,90' },
+          ],
+          extras: [
+            { id: 'bacon-extra', label: 'Bacon extra', price: 'R$ 4,90' },
+            { id: 'cheddar-extra', label: 'Cheddar extra', price: 'R$ 3,90' },
+            { id: 'cebola-caramelizada', label: 'Cebola caramelizada', price: 'R$ 2,90' },
+            { id: 'molho-extra', label: 'Molho extra', price: 'R$ 1,90' },
+          ],
         },
         {
           id: '1-2',
@@ -52,6 +62,11 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Pão brioche, 2 carnes smash, queijo, picles, cebola e molho especial.',
           price: 'R$ 28,90',
           image: IMG.burgerSmash,
+          extras: [
+            { id: 'bacon-extra', label: 'Bacon extra', price: 'R$ 4,90' },
+            { id: 'cheddar-extra', label: 'Cheddar extra', price: 'R$ 3,90' },
+            { id: 'picles-extra', label: 'Picles extra', price: 'R$ 1,90' },
+          ],
         },
         {
           id: '1-3',
@@ -59,6 +74,7 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Anéis de cebola empanados e crocantes, servidos com molho da casa.',
           price: 'R$ 16,90',
           image: IMG.onionRings,
+          extras: [{ id: 'molho-extra', label: 'Molho extra', price: 'R$ 1,90' }],
         },
         {
           id: '1-4',
@@ -66,6 +82,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Batata frita crocante, no ponto certo, com tempero especial.',
           price: 'R$ 12,90',
           image: IMG.fries,
+          extras: [
+            { id: 'cheddar-cremoso', label: 'Cheddar cremoso', price: 'R$ 5,90' },
+            { id: 'bacon-picado', label: 'Bacon picado', price: 'R$ 4,90' },
+          ],
         },
       ],
     },
@@ -94,6 +114,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Dois hambúrgueres, queijo prato, muito bacon e molho barbecue.',
           price: 'R$ 34,90',
           image: IMG.burgerDouble,
+          extras: [
+            { id: 'bacon-extra', label: 'Bacon extra', price: 'R$ 4,90' },
+            { id: 'cheddar-extra', label: 'Cheddar extra', price: 'R$ 3,90' },
+          ],
         },
         {
           id: '1-6',
@@ -101,6 +125,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Hambúrguer de grão-de-bico, queijo, rúcula e maionese vegana.',
           price: 'R$ 27,90',
           image: IMG.burgerVeggie,
+          extras: [
+            { id: 'queijo-vegano-extra', label: 'Queijo vegano extra', price: 'R$ 4,90' },
+            { id: 'rucula-extra', label: 'Rúcula extra', price: 'R$ 1,90' },
+          ],
         },
       ],
     },
@@ -155,6 +183,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Milkshake cremoso de baunilha, chocolate ou morango.',
           price: 'R$ 12,90',
           image: IMG.milkshake,
+          extras: [
+            { id: 'chantilly', label: 'Chantilly', price: 'R$ 2,90' },
+            { id: 'calda-extra', label: 'Calda extra', price: 'R$ 1,90' },
+          ],
         },
       ],
     },
@@ -170,6 +202,15 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Molho de tomate, mussarela de búfala, manjericão fresco e azeite.',
           price: 'R$ 39,90',
           image: IMG.pizzaMargherita,
+          sizes: [
+            { id: 'broto', label: 'Broto', description: '4 fatias', price: 'R$ 29,90' },
+            { id: 'media', label: 'Média', description: '6 fatias', price: 'R$ 39,90' },
+            { id: 'grande', label: 'Grande', description: '8 fatias', price: 'R$ 49,90' },
+          ],
+          extras: [
+            { id: 'borda-recheada', label: 'Borda recheada (catupiry)', price: 'R$ 8,90' },
+            { id: 'queijo-extra', label: 'Queijo extra', price: 'R$ 6,90' },
+          ],
         },
         {
           id: '2-2',
@@ -177,6 +218,15 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Molho de tomate, mussarela e fatias generosas de pepperoni.',
           price: 'R$ 44,90',
           image: IMG.pizzaPepperoni,
+          sizes: [
+            { id: 'broto', label: 'Broto', description: '4 fatias', price: 'R$ 33,90' },
+            { id: 'media', label: 'Média', description: '6 fatias', price: 'R$ 44,90' },
+            { id: 'grande', label: 'Grande', description: '8 fatias', price: 'R$ 55,90' },
+          ],
+          extras: [
+            { id: 'borda-recheada', label: 'Borda recheada (catupiry)', price: 'R$ 8,90' },
+            { id: 'queijo-extra', label: 'Queijo extra', price: 'R$ 6,90' },
+          ],
         },
         {
           id: '2-3',
@@ -184,6 +234,15 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Molho de tomate, mussarela, calabresa fatiada e cebola.',
           price: 'R$ 41,90',
           image: IMG.pizzaCalabresa,
+          sizes: [
+            { id: 'broto', label: 'Broto', description: '4 fatias', price: 'R$ 31,90' },
+            { id: 'media', label: 'Média', description: '6 fatias', price: 'R$ 41,90' },
+            { id: 'grande', label: 'Grande', description: '8 fatias', price: 'R$ 51,90' },
+          ],
+          extras: [
+            { id: 'borda-recheada', label: 'Borda recheada (catupiry)', price: 'R$ 8,90' },
+            { id: 'cebola-extra', label: 'Cebola extra', price: 'R$ 3,90' },
+          ],
         },
       ],
     },
@@ -218,6 +277,12 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Mussarela, provolone, gorgonzola e parmesão.',
           price: 'R$ 46,90',
           image: IMG.pizzaMargherita,
+          sizes: [
+            { id: 'broto', label: 'Broto', description: '4 fatias', price: 'R$ 35,90' },
+            { id: 'media', label: 'Média', description: '6 fatias', price: 'R$ 46,90' },
+            { id: 'grande', label: 'Grande', description: '8 fatias', price: 'R$ 57,90' },
+          ],
+          extras: [{ id: 'borda-recheada', label: 'Borda recheada (catupiry)', price: 'R$ 8,90' }],
         },
       ],
     },
@@ -383,6 +448,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Milkshake cremoso de baunilha, chocolate ou morango.',
           price: 'R$ 12,90',
           image: IMG.milkshake,
+          extras: [
+            { id: 'chantilly', label: 'Chantilly', price: 'R$ 2,90' },
+            { id: 'calda-extra', label: 'Calda extra', price: 'R$ 1,90' },
+          ],
         },
       ],
     },
@@ -458,6 +527,11 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Tortilha crocante, carne temperada, alface, queijo e pico de gallo.',
           price: 'R$ 14,90',
           image: IMG.taco,
+          extras: [
+            { id: 'guacamole-extra', label: 'Guacamole extra', price: 'R$ 3,90' },
+            { id: 'queijo-extra', label: 'Queijo extra', price: 'R$ 2,90' },
+            { id: 'pico-de-gallo-extra', label: 'Pico de gallo extra', price: 'R$ 1,90' },
+          ],
         },
         {
           id: '5-2',
@@ -465,6 +539,11 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Tortilha recheada com carne, arroz, feijão, queijo e molho especial.',
           price: 'R$ 22,90',
           image: IMG.burrito,
+          extras: [
+            { id: 'carne-extra', label: 'Carne extra', price: 'R$ 5,90' },
+            { id: 'queijo-extra', label: 'Queijo extra', price: 'R$ 3,90' },
+            { id: 'guacamole-extra', label: 'Guacamole extra', price: 'R$ 3,90' },
+          ],
         },
         {
           id: '5-3',
@@ -472,6 +551,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Nachos crocantes com queijo derretido, jalapeño e guacamole.',
           price: 'R$ 18,90',
           image: IMG.nachos,
+          extras: [
+            { id: 'guacamole-extra', label: 'Guacamole extra', price: 'R$ 3,90' },
+            { id: 'jalapeno-extra', label: 'Jalapeño extra', price: 'R$ 2,90' },
+          ],
         },
       ],
     },
@@ -492,6 +575,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Tortilha crocante, frango grelhado, alface e molho de iogurte.',
           price: 'R$ 13,90',
           image: IMG.taco,
+          extras: [
+            { id: 'queijo-extra', label: 'Queijo extra', price: 'R$ 2,90' },
+            { id: 'molho-iogurte-extra', label: 'Molho de iogurte extra', price: 'R$ 1,90' },
+          ],
         },
       ],
     },
@@ -540,6 +627,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Massa artesanal, ovos, queijo pecorino, guanciale e pimenta-do-reino.',
           price: 'R$ 36,90',
           image: IMG.carbonara,
+          extras: [
+            { id: 'bacon-extra', label: 'Bacon extra', price: 'R$ 5,90' },
+            { id: 'pecorino-extra', label: 'Queijo pecorino extra', price: 'R$ 4,90' },
+          ],
         },
         {
           id: '6-2',
@@ -547,6 +638,7 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Camadas de massa fresca, molho bolonhesa e queijos gratinados.',
           price: 'R$ 38,90',
           image: IMG.lasagna,
+          extras: [{ id: 'queijo-extra', label: 'Queijo extra', price: 'R$ 4,90' }],
         },
         {
           id: '6-3',
@@ -581,6 +673,10 @@ export const MENU_BY_RESTAURANT: Record<string, MenuCategory[]> = {
           description: 'Penne artesanal ao molho branco cremoso com toque de noz-moscada.',
           price: 'R$ 34,90',
           image: IMG.carbonara,
+          extras: [
+            { id: 'queijo-extra', label: 'Queijo extra', price: 'R$ 4,90' },
+            { id: 'frango-grelhado', label: 'Frango grelhado', price: 'R$ 8,90' },
+          ],
         },
       ],
     },
