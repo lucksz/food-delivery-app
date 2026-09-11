@@ -4,11 +4,13 @@ import HomeHeader from '@/components/home/HomeHeader';
 import RestaurantList from '@/components/home/RestaurantList';
 import SearchBar from '@/components/home/SearchBar';
 import { BANNERS, CATEGORIES, RESTAURANTS } from '@/data/mock';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
+  const router = useRouter();
   const [search, setSearch] = useState('');
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
 
@@ -35,7 +37,12 @@ export default function HomeScreen() {
           onSelect={handleCategorySelect}
         />
         <BannerCarousel banners={BANNERS} />
-        <RestaurantList restaurants={filteredRestaurants} />
+        <RestaurantList
+          restaurants={filteredRestaurants}
+          onRestaurantPress={(restaurant) =>
+            router.push({ pathname: '/restaurant/[id]', params: { id: restaurant.id } })
+          }
+        />
       </ScrollView>
     </SafeAreaView>
   );
